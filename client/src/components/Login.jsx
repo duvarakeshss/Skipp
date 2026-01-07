@@ -82,12 +82,6 @@ const Login = () => {
                 return
             }
 
-            // Validate password
-            if (!securityUtils.validatePassword(password)) {
-                setError('Password must be at least 6 characters long')
-                return
-            }
-
             // Check HTTPS security
             if (!securityUtils.isSecure()) {
                 setError('Connection is not secure. Please use HTTPS.')
